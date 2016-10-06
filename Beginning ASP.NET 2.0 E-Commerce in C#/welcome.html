@@ -1,0 +1,224 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Welcome to Beginning ASP</title>
+</head>
+
+<body>
+
+<h1><font face="Tahoma"><font size="3">Welcome to</font><br>
+Beginning ASP.NET 2.0 E-Commerce in C# 2005!</font></h1>
+<p align="center"><font face="Tahoma">- code download notes and errata -</font></p>
+<p><font size="1" face="Arial" color="#FF0000">(version 0.1, October 15, 2005)<br>
+(version 0.2, October 24, 2005)<br>
+(version 0.3, November 02, 2005)<br>
+(version 0.4, November 06, 2005)</font><font face="Arial" color="#FF0000"><br>
+</font><font size="1" face="Arial" color="#FF0000">(version 0.5, November 14, 2005)</font><font face="Arial" color="#FF0000"><br>
+&nbsp;</font></p>
+<p><b><font face="Arial">Dear Reader,</font></b></p>
+<p><font face="Arial">Thank you for buying <i>Beginning ASP.NET 2.0 E-Commerce 
+in C# 2005</i>! We really hope you'll enjoy reading this book, and that it will effectively help you build 
+your own websites with ASP.NET 2.0, C# 2005, and SQL 
+Server!</font></p>
+<p><font face="Arial">Please read the remainder of this document carefully 
+because <font color="#FF0000">it contains updated information, including errata</font>. If you have any questions or suggestions, 
+don't hesitate to contact Cristian Darie through his personal website at
+<a href="http://www.CristianDarie.ro">http://www.CristianDarie.ro</a>. He always 
+loves hearing from you, but because of time constraints sometimes it can take up 
+to 15 days to reply. </font></p>
+<p><font face="Arial">Also, please don't hesitate to post an 
+<a href="http://www.amazon.com/exec/obidos/tg/detail/-/1590592549">Amazon review</a> if you 
+happen to like the book, or have any suggestions that might help other potential 
+readers decide if the book would be useful for them.</font></p>
+<p><font face="Arial">Thank you,</font></p>
+<p><font face="Arial">Cristian Darie and Karli Watson </font></p>
+<p>&nbsp;</p>
+
+<p><b><font face="Arial" size="5">Code Download Release Notes</font></b></p>
+<p><font face="Arial">The code in this book has been tested with the final 
+versions of Visual 
+Studio 2005 Professional Edition, Visual Web Developer 2005 Express Edition, and 
+SQL Server 2005. </font></p>
+<p><font face="Arial">The code does <u>not</u> work with Visual Studio 2003, and 
+there's no easy way to port it to ASP.NET 1.1. If you need to use ASP.NET 1.1, 
+then you might want to check <i>Beginning ASP.NET 1.1 E-Commerce</i>. If you need to 
+use SQL Server 2000 (or MSDE) instead of SQL Server 2005, you can do with a few 
+changes to the SQL code.</font></p>
+<p><font face="Arial">One detail that changed since we wrote the book is about 
+SQL Server 2005 Express Manager. This utility allowed you to connect to, and 
+execute SQL scripts in a SQL Server 2005 instance. However this utility is no 
+longer available, so you'll need to use the <b>sqlcmd </b>utility, or Visual Web Developer, or the 
+Management Studio utility that ships with other editions of SQL Server 2005. 
+Microsoft has written 
+more details about these options at <a href="http://lab.msdn.microsoft.com/express/sql/">
+http://lab.msdn.microsoft.com/express/sql/</a>.&nbsp; </font></p>
+<p><font face="Arial">This document will be updated in response to your 
+feedback. I will send announcements about 
+these kinds of updates (a few announcements every year) through my newsletter. 
+Subscribe by sending a blank email to
+<a href="mailto:cristiandarienews-subscribe@yahoogroups.com">
+cristiandarienews-subscribe@yahoogroups.com</a>, or simply click
+<a href="http://groups.yahoo.com/group/cristiandarienews/join">here</a>.</font></p>
+<p>&nbsp;</p>
+<p><b><font size="5" face="Arial">Using the Code Download</font></b></p>
+<p><font face="Arial">This archive contains all the code presented in the book. 
+However, if you can afford the time, try to write the code yourself, following 
+the exercises from the book. The only bit of this archive which can't be found 
+in the book are the image folders.</font></p>
+<p><font face="Arial">This archive contains three main folders:</font></p>
+<p><font face="Arial"><b>ImageFolders<br>
+</b>This folder contains the <b>Images </b>and <b>ProductImages </b>folders which you'll need for 
+BalloonShop (the sample e-commerce site you're building in this book).</font></p>
+<p><font face="Arial"><b>Code<br>
+</b>Here you'll find the code for the BalloonShop project. For the first 11 
+chapters, the complete code is included. For chapters 12-16, because the code is 
+advanced and generally needs customization, we thought it would be more useful 
+to include only the bits specific to those chapters. So if you'll want to go 
+through the book as quickly as possible, you'll need to start with the code from 
+chapter 11, and the dig your way to the end of the book. </font></p>
+<p><font face="Arial"><b>Database<br>
+</b>This folder contains the database creation scripts for the tables, stored 
+procedures, and functions. You can find the SQL scripts grouped by chapter, in 
+files named <b>chapter02.sql</b>, <b>chapter03.sql</b>, and so on. You can also 
+find the complete script for chapters 02 through 11 in a file named <b>
+complete_script_chapters_02-11.sql</b> (note that this script assumes the 
+BalloonShop database doesn't exist, so it creates it). <br>
+<br>
+You can also find a subfolder called <b>INSERTs</b>, which contains the <b>
+PopulateDepartment.sql</b>,<b> PopulateCategory.sql</b>, <b>PopulateProduct.sql
+</b>and <b>PopulateProductCategory.sql </b>files that insert the sample data to 
+the tables. You'll want to use these files if you decide to create your data 
+structures manually and not use the chapterXX.sql files, which contain the 
+INSERT statements as well. When using the Populate scripts, your data tables 
+must be newly created (or recently TRUNCATEd), because the new autogenerated IDs 
+must start with 1 (otherwise the associations between the table records won't 
+work).</font></p>
+
+<p>&nbsp;</p>
+
+<p><b><font face="Arial" size="5">Errata</font></b></p>
+<p><i><font face="Arial" size="2">The errata list will be constantly updated in 
+response to your feedback. Many thanks to Racanti Stefano, Stephen Gilkes, and 
+Benjamin R. Adamski 
+for providing essential technical feedback and errata reports, helping many 
+other book readers with their effort. </font></i></p>
+<p><font face="Arial" size="2"><b>Page 38, exercise step 1</b><br>
+You are instructed to copy the </font><font size="2" face="Courier New">
+ImageFolders\Images</font><font face="Arial" size="2"> folder from the code 
+download to your project's folder. It should be more clearly specified that you 
+need to copy just the </font><font size="2" face="Courier New">Images </font>
+<font face="Arial" size="2">folder, and not place it inside an </font>
+<font size="2" face="Courier New">ImageFolders </font>
+<font face="Arial" size="2">folder as it is in the code download.</font></p>
+<p><font face="Arial" size="2"><b>Page 77</b><br>
+In the paragraph following the second code snippet, </font>
+<font size="2" face="Courier New">SqlCommand</font><font face="Arial" size="2"> 
+should read </font><font size="2" face="Courier New">SqlConnection</font><font face="Arial" size="2">,
+</font><font size="2" face="Courier New">OracleCommand</font><font face="Arial" size="2"> 
+should read </font><font size="2" face="Courier New">OracleConnection</font><font face="Arial" size="2">, 
+and </font><font size="2" face="Courier New">DbCommand</font><font face="Arial" size="2"> 
+should read </font><font size="2" face="Courier New">DbConnection</font><font face="Arial" size="2">.</font></p>
+<p><font face="Arial" size="2"><b>Page 81, paragraph 1</b><br>
+The </font><font size="2" face="Courier New">System.Web.Mail </font>
+<font face="Arial" size="2">namespace mentioned has been replaced in .NET 2.0 
+with </font><font size="2" face="Courier New">System.Net.Mail</font><font face="Arial" size="2">.</font></p>
+<p><font face="Arial" size="2"><b>Page 82/83, exercise steps 4&amp;6</b><br>
+The file you create at step 4 should be called </font>
+<font size="2" face="Courier New">BalloonShopConfiguration.cs</font><font face="Arial" size="2"> 
+instead of </font><font size="2" face="Courier New">ApplicationConfiguration.cs</font><font face="Arial" size="2">. 
+The class name mentioned at step 6 should be </font>
+<font size="2" face="Courier New">BalloonShopConfiguration</font><font face="Arial" size="2"> 
+instead of </font><font size="2" face="Courier New">ApplicationConfiguration</font><font face="Arial" size="2">.</font></p>
+<p><font face="Arial" size="2"><b>Page 85</b><br>
+In the </font><font face="Courier New" size="2">SendMail</font><font face="Arial" size="2"> method there is a portion of commented code that shows how to 
+deal with SMTP servers that require authentication. That code should work with 
+an object called </font><font size="2" face="Courier New">mailMessage</font><font face="Arial" size="2"> 
+(created earlier in the method) instead of </font>
+<font size="2" face="Courier New">message</font><font face="Arial" size="2">:<br>
+</font><font size="2" face="Courier New">/*<br>
+// For SMTP servers that require authentication<br>
+<b>mailMessage</b>.Fields.Add(&quot;http://schemas.microsoft.com/cdo/configuration/smtpauthenticate&quot;, 
+1);<br>
+<b>mailMessage</b>.Fields.Add(&quot;http://schemas.microsoft.com/cdo/configuration/sendusername&quot;, 
+&quot;SmtpHostUserName&quot;);<br>
+<b>mailMessage</b>.Fields.Add(&quot;http://schemas.microsoft.com/cdo/configuration/sendpassword&quot;, 
+&quot;SmtpHostPassword&quot;);<br>
+*/</font></p>
+<p><font face="Arial" size="2"><b>Page 86, line 3</b><br>
+</font><font size="2" face="Courier New">BalloonShopConfiguration.SiteName</font><font face="Arial" size="2"> 
+will be defined at page 137. Until then, you'll need to hard-code the name of 
+your site:<br>
+</font><font size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string 
+subject = &quot;BalloonShop Error Report&quot;;</font></p>
+<p><font face="Arial"><b><font size="2">Page 101-102</font></b><font size="2"><br>
+The mentioned error doesn't show up until chapter 4, when the </font>
+<font face="Courier New" size="2">DepartmentID</font><font size="2"> query 
+string parameter will be read and used. </font></font></p>
+<p><font face="Arial"><b><font size="2">Page 118</font></b><font size="2"><br>
+The description of figures 4-10 and 4-11 should be &quot;Creating the </font>
+<font face="Courier New">ProductCategory</font><font face="Arial"> table&quot; 
+instead of &quot;Creating the </font><font face="Courier New">Product</font><font face="Arial"> 
+table&quot;.</font></font></p>
+<p><font face="Arial" size="2"><b>Page 120, exercise step 12</b><br>
+&quot;the same way you did in steps 11 and 12&quot; should refer to steps 10 and 11 
+instead.</font></p>
+<p><font face="Arial" size="2"><b>Page 142</b><br>
+</font>&quot;Add the <font face="Courier New" size="2">ProductDetails</font> struct 
+at the beginning of <font face="Courier New" size="2">Catalog.cs</font>&quot; should 
+read &quot;Add the <font face="Courier New" size="2">ProductDetails</font> struct at 
+the beginning of <font face="Courier New" size="2">CatalogAccess.cs</font>&quot;.</p>
+<p><font face="Arial" size="2"><b>Page 147</b><br>
+&quot;you are redirected to
+</font><font face="Courier New" size="2">Catalog.aspx</font><font face="Arial" size="2"> 
+(which at this moment doesn't exist)&quot;. This is inaccurate because the
+</font><font face="Courier New" size="2">Catalog.aspx</font><font face="Arial" size="2"> 
+page was created at page 97, exercise step 12.</font> </p>
+<p><font face="Arial" size="2"><b>Page 158</b><br>
+Step 5 of the exercise instructs you to change the
+</font><font face="Courier New" size="2">RepeatDirection</font><font face="Arial" size="2"> 
+property to
+</font><font face="Courier New" size="2">Horizontal</font><font face="Arial" size="2">. 
+Yet, neither the code snippet at step 6, nor the code download, contains that 
+property.</font></p>
+<p><font face="Arial" size="2"><b>Page 349</b><br>The</font>
+<font face="Courier New" size="2">DeleteProduct</font><font face="Arial" size="2"> 
+stored procedure shouldn't receive a </font><font face="Courier New" size="2">
+CategoryID</font> <font face="Arial" size="2">parameter. The correct code for 
+altering the procedure is:</font></p>
+<p><font face="Courier New" size="2">ALTER PROCEDURE DeleteProduct<br>
+(@ProductID INT)<br>
+AS<br>
+DELETE FROM ShoppingCart WHERE ProductID=@ProductID<br>
+DELETE FROM ProductCategory WHERE ProductID=@ProductID<br>
+DELETE FROM Product where ProductID=@ProductID</font></p>
+<p><font face="Arial" size="2"><b>Page 382</b><br>In certain circumstances, you 
+may end up having orders in the database that contain no products. When trying 
+to view these orders from the administration page, you'd get an error because 
+the total amount value returned from the database is </font>
+<font face="Courier New" size="2">NULL</font><font face="Arial" size="2">, and 
+cannot be converted successfully to </font><font face="Courier New" size="2">
+decimal</font><font face="Arial" size="2"> by the C# code. To have your solution 
+bulletproof, you need to use the </font><font face="Courier New" size="2">ISNULL</font><font face="Arial" size="2"> 
+function in </font><font face="Courier New" size="2">OrderGetInfo</font><font face="Arial" size="2">, 
+so that the stored procedure would return </font>
+<font face="Courier New" size="2">0</font><font face="Arial" size="2"> instead 
+of </font><font face="Courier New" size="2">NULL</font><font face="Arial" size="2"> 
+for orders with no products (this technique is used in the </font>
+<font face="Courier New" size="2">ShoppingCartGetTotalAmount</font><font face="Arial" size="2"> 
+at page 320).</font></p>
+<p><font face="Courier New" size="2">ALTER PROCEDURE OrderGetInfo<br>
+(@OrderID INT)<br>
+AS<br>
+SELECT OrderID, <br>
+(SELECT <b>ISNULL(</b>SUM(Subtotal)<b>, 0)</b> FROM OrderDetail WHERE OrderID = 
+@OrderID) <br>
+...</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

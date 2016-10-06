@@ -1,0 +1,29 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BalloonShop.master.cs"
+  Inherits="BalloonShop" %>
+<%@ Register Src="UserControls/DepartmentsList.ascx" TagName="DepartmentsList" TagPrefix="uc2" %>
+<%@ Register Src="UserControls/Header.ascx" TagName="Header" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <title>BalloonShop</title>
+</head>
+<body>
+  <form id="Form1" runat="server">
+    <table cellspacing="0" cellpadding="0" width="770" border="0">
+      <tr>
+        <td width="220" valign="top">
+          <uc2:DepartmentsList ID="DepartmentsList1" runat="server" />
+          <br />
+          List of Categories
+          <br />
+        </td>
+        <td valign="top">
+          <uc1:Header ID="Header1" runat="server" />
+          <asp:ContentPlaceHolder ID="contentPlaceHolder" runat="server">
+          </asp:ContentPlaceHolder>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

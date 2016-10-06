@@ -1,0 +1,59 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BalloonShop.master.cs"
+  Inherits="BalloonShop" %>
+<%@ Register Src="UserControls/UserInfo.ascx" TagName="UserInfo" TagPrefix="uc5" %>
+<%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="uc4" %>
+<%@ Register Src="UserControls/CategoriesList.ascx" TagName="CategoriesList" TagPrefix="uc3" %>
+<%@ Register Src="UserControls/DepartmentsList.ascx" TagName="DepartmentsList" TagPrefix="uc2" %>
+<%@ Register Src="UserControls/Header.ascx" TagName="Header" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <title>BalloonShop</title>
+  <script language="JavaScript">
+  <!--
+  var PayPalWindow = null;
+
+  // Opens a PayPal window
+  function OpenPayPalWindow(url)
+  { 
+    if ((!PayPalWindow) || PayPalWindow.closed) 
+      // If the PayPal window doesn't exist, we open it
+      PayPalWindow = window.open(url, "cart", "height=300, width=500");
+    else 
+    { 
+      // If the PayPal window exists, we make it show
+      PayPalWindow.location.href=url;
+      PayPalWindow.focus();
+    }   
+  } 
+  // -->
+  </script>
+</head>
+<body>
+  <form id="Form1" runat="server">
+    <table cellspacing="0" cellpadding="0" width="770" border="0">
+      <tr>
+        <td width="220" valign="top">
+          <uc5:UserInfo ID="UserInfo1" runat="server" />
+          <br />
+          <uc2:DepartmentsList ID="DepartmentsList1" runat="server" />
+          <br />
+          <uc3:CategoriesList ID="CategoriesList1" runat="server" />
+          <uc4:SearchBox id="SearchBox1" runat="server">
+          </uc4:SearchBox>
+          <p align="center">   
+            <a href="JavaScript: OpenPayPalWindow('https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=youremail@yourserver.com&display=1&return=www.yourwebsite.com&cancel_return=www.yourwebsite.com')">    
+              <IMG src="Images/ViewCart.gif" border="0">
+            </a>
+          </p>
+        </td>
+        <td valign="top">
+          <uc1:Header ID="Header1" runat="server" />
+          <asp:ContentPlaceHolder ID="contentPlaceHolder" runat="server">
+          </asp:ContentPlaceHolder>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
